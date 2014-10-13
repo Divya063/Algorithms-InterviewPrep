@@ -2,7 +2,7 @@
 
 ######Pig Latin
 
-Write a method that takes in a string and returns the pig latin equivalent. Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end. If the string starts with a consonant do nothing. “pig” = “igpay”, “banana” = “ananabay”
+Write a method that takes in a string and returns the pig latin equivalent. Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end. If the string starts with a consonant do nothing. Examples: “pig” = “igpay”, “banana” = “ananabay”.
 
 ######Reverse String
 
@@ -15,7 +15,7 @@ Determine if a given string is a palindrome. A palindrome is a string that is th
 ######Anagrams
 
 Write a method to decide if two strings are anagrams or not.
-An anagram is a word formed by rearranging the letters of another word, e.g., iceman is an anagram of cinema. 
+An anagram is a word formed by rearranging the letters of another word, e.g., "iceman" is an anagram of "cinema". 
 
 ######Finding Duplicates
 
@@ -29,5 +29,5 @@ Write an algorithm to find the first non-repeated character in a string. For exa
 
 ######Adding Strings
 
-Add two strings. For example ""423" + "99" = "522"
-Hint. Try to do it as efficiently as possible. Also, does it matter that it's base 10?
+Add two strings representing real numbers. For example ""423" + "99" = "522"
+
