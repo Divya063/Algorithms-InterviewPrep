@@ -16,28 +16,29 @@ Add three additional methods to a generic stack data structure. Write a peek for
 
 ######Infix to Postfix Conversion
 Given an expression in infix notation return it in postfix notation. An infix expression is one in which operators are located between their operands. In postfix notation, the operator immediately follows its operands. ‘X + Y’ becomes ‘XY+’ in postfix notation.
-Example:	3+4 → 3 4 +
-(300+23)*(43-21)/(84+7) → 300 23 + 43 21 - * 84 7 + /
+>_Example_:	
+>>3+4 → 3 4 +
+
+>>(300+23)*(43-21)/(84+7) → 300 23 + 43 21 - * 84 7 + /
 
 
 ######Topological sort
 Given a set of tasks and their dependency graph (i.e. edge (u, v)  means that task u depends on task v and must be completed after v; tasks can have multiple dependencies). Assume that there is no circular dependency, return an execution order of these tasks such that the dependencies are satisfied. 
 
-Example: 
-Input: 1 => 2; 3=>1; 2 => 4; 3=>4
-Output: 4, 2, 1, 3
+>_Example_: 
+>>Input: 1 => 2; 3=>1; 2 => 4; 3=>4
+
+>>Output: 4, 2, 1, 3
 
 Note: There can be many possible orders, just need to return one. The number of tasks <= 10,000.
 
-######Duplicate parenthesis
-Give an algorithm for finding duplicate parenthesis in a expression. 
-{{ (( a + b ) * (( c + d ))) }}
-Tower of Hanoi
-In the classic problem of the Towers of Hanoi, you have 3 towers and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (i.e., each disk sits on top of an even larger one). You have the following constraints:			
-(1) Only one disk can be moved at a time.
-(2) A disk is slid off the top of one tower onto the next rod.
-(3) A disk can only be placed on top of a larger disk.
-Write a program to move the disks from the first tower to the last using Stacks. 
+######Duplicate parentheses
+Give an algorithm for finding duplicate parentheses in a expression. 
+>_Example_:
+>> (( a + b ) * (( c + d ))) has duplicate parentheses around c+d
+
+>> ((a + b) + c) doesn't have duplicate parentheses
+
 				
 ######Reverse a Stack using recursion
 You can use only functions available with the stack push(), pop(), top(), isEmpty()
@@ -45,4 +46,14 @@ You can use only functions available with the stack push(), pop(), top(), isEmpt
 ######Implement LRU Cache
 How to implement LRU caching scheme? What data structures should be used?
 We are given total possible page numbers that can be referred. We are also given cache (or memory) size (Number of page frames that cache can hold at a time). The LRU caching scheme is to remove the least recently used frame when the cache is full and a new page is referenced which is not there in cache. 
+
+######Tower of Hanoi
+In the classic problem of the Towers of Hanoi, you have 3 towers and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (i.e., each disk sits on top of an even larger one). You have the following constraints:			
+ * Only one disk can be moved at a time.
+
+ * A disk is slid off the top of one tower onto the next rod.
+
+ * A disk can only be placed on top of a larger disk.
+
+Write a program to move the disks from the first tower to the last using Stacks. 
 
