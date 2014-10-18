@@ -2,7 +2,7 @@
 
 ######Pig Latin
 
-Write a method that takes in a string and returns the pig latin equivalent. Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end. If the string starts with a consonant do nothing. Examples: “pig” = “igpay”, “banana” = “ananabay”.
+Write a method that takes in a string and returns the pig latin equivalent. Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end. If the string starts with a vowel do nothing. Examples: “pig” = “igpay”, “banana” = “ananabay”.
 
 ######Reverse String
 
