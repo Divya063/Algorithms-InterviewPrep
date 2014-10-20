@@ -198,10 +198,109 @@ the output would be
 @"eht yob nar"
 Tell the complexity of the solution.</p>
 
-<h3>
-<a name="week-3" class="anchor" href="#week-3"><span class="octicon octicon-link"></span></a>Week 3</h3>
+<h2>
+<a name="week-3-stacks-and-queues-easy" class="anchor" href="#week-3-stacks-and-queues-easy"><span class="octicon octicon-link"></span></a>Week 3 (Stacks and Queues [Easy])</h2>
 
-<p><a href="https://github.com/WomenWhoCode/Algorithms-InterviewPrep/blob/master/Problems/Stacks%20and%20Queues%20%5BEasy%5D.md">Stacks and Queues [Easy]</a></p>
+<hr>
+
+<h4>
+<a name="balanced-parentheses" class="anchor" href="#balanced-parentheses"><span class="octicon octicon-link"></span></a>Balanced Parentheses</h4>
+
+<p>Write a function which checks if parentheses in a given expression are balanced.</p>
+
+<blockquote>
+<p><em>Example</em>: </p>
+
+<blockquote>
+<p>(5+6)*(7+8)/(4+3)   - balanced parentheses</p>
+
+<p>(4+5)*(2+(4-7)      - not balanced parentheses</p>
+
+<p>(7+8)*{3-[5+6]*4}   - balanced parentheses</p>
+</blockquote>
+</blockquote>
+
+<h4>
+<a name="ascending-order" class="anchor" href="#ascending-order"><span class="octicon octicon-link"></span></a>Ascending Order</h4>
+
+<p>Write a program to sort a stack in ascending order (with biggest items on top). You may use at most one additional stack to hold items, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: push, pop, peek, and isEmpty. </p>
+
+<h4>
+<a name="postfix-expression" class="anchor" href="#postfix-expression"><span class="octicon octicon-link"></span></a>Postfix expression</h4>
+
+<p>Given an expression in postfix notation evaluate it. In postfix notation operands are followed by operations. For example, X+Y becomes XY+ in postfix notation.</p>
+
+<blockquote>
+<p><em>Example</em>: </p>
+
+<blockquote>
+<p>5 6 +     →     11</p>
+
+<p>23 17 + 45 5 - -  → 0</p>
+</blockquote>
+</blockquote>
+
+<h4>
+<a name="snake" class="anchor" href="#snake"><span class="octicon octicon-link"></span></a>Snake</h4>
+
+<p>You’re to write a game to paint a snake on the screen. At every time interval, the player must move the head of the snake in any of the 3 directions (other than going backward), the body of the snake will move along. The game is over when the snake hits its own body or the screen boundary. Design the API and data structure to use.</p>
+
+<h4>
+<a name="permutations--combinations" class="anchor" href="#permutations--combinations"><span class="octicon octicon-link"></span></a>Permutations / Combinations</h4>
+
+<p>Print all permutations of N elements in an array.
+Print all combinations of N elements in an array (each element is chosen at most once in any combination).             </p>
+
+<h4>
+<a name="find-moving-averages-and-maximums" class="anchor" href="#find-moving-averages-and-maximums"><span class="octicon octicon-link"></span></a>Find Moving Averages and Maximums</h4>
+
+<p>Given an infinite stream of numbers in time order, at any given time:
+Find moving averages of the last K numbers.
+Find the maximums of the last K numbers (maybe medium problem)</p>
+
+<h4>
+<a name="design-a-queue-using-an-array" class="anchor" href="#design-a-queue-using-an-array"><span class="octicon octicon-link"></span></a>Design a Queue using an array</h4>
+
+<p>Develop the push | pop | peek | isEmpty functions for a queue using an array as the internal data structure.
+Removing all elements recursively
+Write a recursive function that will remove all the elements in a stack and/or if you have time, write a recursive function that removes all elements in a queue.</p>
+
+<h4>
+<a name="design-a-stack-using-an-array" class="anchor" href="#design-a-stack-using-an-array"><span class="octicon octicon-link"></span></a>Design a Stack using an array</h4>
+
+<p>Develop the push | pop | peek | isEmpty functions for a stack using an array as the internal data structure.</p>
+
+<h4>
+<a name="implement-two-stacks-in-an-array" class="anchor" href="#implement-two-stacks-in-an-array"><span class="octicon octicon-link"></span></a>Implement two stacks in an array</h4>
+
+<p>Create a data structure twoStacks that represents two stacks. Implementation of twoStacks should use only one array, i.e., both stacks should use the same array for storing elements. Following functions must be supported by twoStacks.</p>
+
+<blockquote>
+<p>push1(int x) –&gt; pushes x to first stack </p>
+
+<p>push2(int x) –&gt; pushes x to second stack</p>
+
+<p>pop1() –&gt; pops an element from first stack and return the popped element</p>
+
+<p>pop2() –&gt; pops an element from second stack and return the popped element</p>
+</blockquote>
+
+<p>Implementation of twoStack should be space efficient.</p>
+
+<h4>
+<a name="find-the-first-circular-tour-that-visits-all-petrol-pumps" class="anchor" href="#find-the-first-circular-tour-that-visits-all-petrol-pumps"><span class="octicon octicon-link"></span></a>Find the first circular tour that visits all petrol pumps</h4>
+
+<p>Suppose there is a circle. There are n petrol pumps on that circle. You are given two sets of data.</p>
+
+<blockquote>
+<ul>
+<li>The amount of petrol that petrol pump will give.</li>
+<li>Distance from that petrol pump to the next petrol pump.</li>
+</ul>
+</blockquote>
+
+<p>Calculate the first point from where a truck will be able to complete the circle (The truck will stop at each petrol pump and it has infinite capacity). Expected time complexity is O(n). Assume for 1 litre petrol, the truck can go 1 unit of distance.
+For example, let there be 4 petrol pumps with amount of petrol and distance to next petrol pump value pairs as {4, 6}, {6, 5}, {7, 3} and {4, 5}. The first point from where truck can make a circular tour is 2nd petrol pump. Output should be “start = 1″ (index of 2nd petrol pump).</p>
 
 <p><a href="https://github.com/WomenWhoCode/Algorithms-InterviewPrep/blob/master/Problems/Stacks%20and%20Queues%20%5BMedium%5D.md">Stacks and Queues [Medium]</a></p>
 
