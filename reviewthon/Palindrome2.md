@@ -19,3 +19,36 @@ Return True if the string is a palindrome, return False otherwise.
 **Sample Output:**
 
 True
+
+***
+
+# Solution (C++)
+
+```
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    std::string input;
+    while (std::cin) {
+        getline(std::cin, input);
+    }
+    locale loc;
+    std::string::iterator it = input.begin();
+    std::string::reverse_iterator rit = input.rbegin();
+    for (; it != input.end() && rit != input.rend(); ++it, ++rit) {
+        if (tolower(*it, loc) != tolower(*rit, loc)) {
+            std::cout << "False" << std::endl;
+            return 0;
+        }
+    }
+    std::cout << "True" << std::endl;
+    return 0;
+}
+```
