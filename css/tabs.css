@@ -172,7 +172,14 @@
 	font-size: 0.8em;
 	line-height: 1.25;
 }
-
+.content-wrap section code{
+	margin: 0;
+	padding: 0.5em 0;
+	color: rgba(40,44,42,0.5);
+	font-weight: 500;
+	font-size: 0.8em;
+	line-height: 1.25;
+}
 /* Fallback */
 .no-js .content-wrap section {
 	display: block;
