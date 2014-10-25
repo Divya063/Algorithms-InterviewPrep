@@ -51,6 +51,7 @@
 							</div>
 							<div>
 								<p>Solution (C++)</p>
+								<ol>
 									<pre class="code-snippet"><code>
 using namespace std;
 
@@ -86,10 +87,146 @@ int main() {
     std::cout << "True" << std::endl;
     return 0;
 }
-								</code></pre>
+									</code></pre>
+								</ol>
 							</div>
 						</section>
-						<section id="section-bar-2"><p>2</p></section>
+						<section id="section-bar-2">
+							<div>
+								<p>Problem</p>
+								<ol>
+									Given 2 arrays find an intersection of them. Output array should be sorted without duplicates. Build-in function for sorting is allowed to use.
+
+The effective solution would have a time complexity O(m + n) before sorting the intersection array where n and m are sizes of the arrays.
+<pre><code> 
+Input
+size of array 1, size of array 2
+array 1
+array 2
+
+Output
+Print out of the sorted intersection array with whitespace as divider
+
+Sample Input
+3 4
+1 2 3
+0 2 3 4
+
+Sample Output
+2 3
+</code></pre>
+								</ol>
+							</div>
+							<div>
+								<p>Solution 1 (C++)</p>
+								<ol>
+									<pre class="code-snippet"><code>
+using namespace std;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    std::vector&ltint&gt array1;
+    std::vector&ltint&gt array2;
+    std::vector&ltint&gt intersect; 
+
+    std::string line;
+    int count = 0;
+    
+    while (getline(std::cin, line)) {
+        int num;
+        std::stringstream lineStr(line);
+        while (lineStr >> num) {
+            if (count == 1) {
+                array1.push_back(num);
+            } else if (count == 2) {
+                array2.push_back(num);
+            }
+        }
+        count++;
+    }
+    std::sort (array1.begin(), array1.end());
+    std::sort (array2.begin(), array2.end());
+
+    std::vector&ltint&gt::const_iterator it1 = array1.begin();
+    std::vector&ltint&gt::const_iterator it2 = array2.begin();
+
+    while (it1 != array1.end() && it2 != array2.end()) {
+        if (*it1 &lt *it2) {
+            ++it1;
+        } else if (*it2 < *it1) {
+            ++it2;
+        } else {
+            if (intersect.empty() || intersect.back() != *it1) {
+                intersect.push_back(*it1);
+            }
+            ++it1;
+            ++it2;
+        }
+    }
+    
+    for (int i=0; i &lt intersect.size(); i++) {
+        std::cout << intersect[i] << ' ';
+    }
+    
+    return 0;
+}
+
+									</code></pre>
+								</ol>
+							</div>
+							<div>
+								<p>Solution 2 (C++)</p>
+								<ol>
+									<pre class="code-snippet"><code>
+using namespace std;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    std::string input;
+    std::vector&ltint&gt array1;
+    std::vector&ltint&gt array2;
+    int count = 0;
+    
+    while (getline (std::cin, input)) {
+        std::stringstream stream(input);
+        int num;
+        while (stream >> num) {
+            if (count == 1) {
+                array1.push_back(num);
+            } else if (count == 2) {
+                array2.push_back(num);
+            }
+        }
+        count++;
+    }
+
+    std::map&ltint, int&gt table;
+    std::vector&ltint&gt intersection;
+    
+    // insert in the table
+    for (int i=0; i < array1.size(); i++) {
+        if (table[array1[i]] == 0) {
+            table[array1[i]]++;    
+        }
+    }
+    
+    // second pass to check duplicates
+    for (int i=0; i < array2.size(); i++) {
+        if (table[array2[i]] == 1) {
+            intersection.push_back(array2[i]);
+            table[array2[i]]++;
+        }
+    }
+
+    sort(intersection.begin(), intersection.end());
+    for (int i=0; i < intersection.size(); i++) {
+        std::cout << intersection[i] << ' ';
+    }
+    
+    return 0;
+}
+									</code></pre>
+								</ol>
+							</div>
+						</section>
 						<section id="section-bar-3"><p>3</p></section>
 						<section id="section-bar-4"><p>4</p></section>
 						<section id="section-bar-5"><p>5</p></section>
