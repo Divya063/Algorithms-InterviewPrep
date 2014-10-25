@@ -56,7 +56,7 @@ a:hover, a:focus {
 }
 
 .container > section {
-	padding: 5em 0;
+	padding: 1em 0;
 	font-size: 1.25em;
 	min-height: 100%;
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Algorithms-InterviewPrep by WomenWhoCode</title>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+  		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>Algorithms-InterviewPrep by WomenWhoCode<span>Sample algorithm questions used at Meetups</span>
+					<span>Reviewthon-1 (Arrays, Strings, Stacks & Queues)</span></h1>
+				<p class="support">Your browser does not support <strong>flexbox</strong>! <br />Please view this demo with a <strong>modern browser</strong>.</p>
+			</header>
+			<section>
+				<div class="tabs tabs-style-bar">
+					<nav>
+						<ul>
+							<li><a href="#section-bar-1"><span>Palindrome</span></a></li>
+							<li><a href="#section-bar-2"><span>Array Intersection</span></a></li>
+							<li><a href="#section-bar-3"><span>Pair for sum</span></a></li>
+							<li><a href="#section-bar-4"><span>Apple Stock</span></a></li>
+							<li><a href="#section-bar-5"><span>String permutation</span></a></li>
+							<li><a href="#section-bar-6"><span>Duplicate Parentheses</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-bar-1">
+							<div>
+								<p>Problem</p>
+								<ol>Determine if a given string is a palindrome. A palindrome is a string that is the same forwards as backwards, ignoring letter case, punctuation marks and word dividers. For example, “racecar” and “Amor, Roma” are palindromes, “abcd” is not.
+
+								We limit the punctuation marks to ignore by the period, comma, question mark, exclamation point, apostrophe, colon, semicolon, hyphen, white space.
+
+									<code><br>Input: String
+
+										<br>Output: Return True if the string is a palindrome, return False otherwise.
+
+										<br>Sample Input:'civic'
+
+										<br>Sample Output: True
+									</code>
+								</ol>
+							</div>
+							<div>
+								<p>Solution (C++)</p>
+									<pre class="code-snippet"><code>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    std::string input;
+    char l[] = {'.', ',', '?', '!', '\'', ':', ';','-', ' '};
+    
+    set&ltchar&gt ignoreList(l, l+sizeof(l));
+    
+    while (std::cin) {
+        getline(std::cin, input);
+    }
+    locale loc;
+    std::string::iterator it = input.begin();
+    std::string::reverse_iterator rit = input.rbegin();
+    while (it != input.end() && rit != input.rend()) {
+        if (ignoreList.find(*it) != ignoreList.end()) {
+            ++it;
+            continue;
+        }
+        if (ignoreList.find(*rit) != ignoreList.end()) {
+            ++rit;
+            continue;
+        }
+        if (tolower(*it, loc) != tolower(*rit, loc)) {
+            std::cout << "False" << std::endl;
+            return 0;
+        }
+        ++it;
+        ++rit;
+    }
+    std::cout << "True" << std::endl;
+    return 0;
+}
+								</code></pre>
+							</div>
+						</section>
+						<section id="section-bar-2"><p>2</p></section>
+						<section id="section-bar-3"><p>3</p></section>
+						<section id="section-bar-4"><p>4</p></section>
+						<section id="section-bar-5"><p>5</p></section>
+						<section id="section-bar-6"><p>5</p></section>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+			</section>
+			</div><!-- /container -->
+		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+		<footer>
+		  <p>This page was created using <a href="http://tympanus.net/codrops/category/tutorials/">Codrops Template</a>.</p>
+		</footer>
+
+	</body>
+</html>

@@ -65,8 +65,9 @@
 	display: block;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
-	line-height: 2.5;
+	/*word-wrap: break-word;*/
+	/*white-space: nowrap;*/
+	line-height: 1.3;
 }
 
 .tabs nav a span {
@@ -172,14 +173,26 @@
 	font-size: 0.8em;
 	line-height: 1.25;
 }
+.content-wrap .code-snippet {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+.content-wrap .code-snippet{
+	color: green;
+}
+
 .content-wrap section code{
 	margin: 0;
 	padding: 0.5em 0;
-	color: rgba(40,44,42,0.5);
 	font-weight: 500;
 	font-size: 0.8em;
 	line-height: 1.25;
+	/*font-size: 12px;*/
 }
+
 /* Fallback */
 .no-js .content-wrap section {
 	display: block;
