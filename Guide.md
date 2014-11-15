@@ -13,7 +13,7 @@ This guide will help you to prepare and host an algorithm and interview prep mee
     * Speaker system
     * Algorithm exercises website (ex. [http://meetupresources.herokuapp.com/index.html])
     * Interview Questions samples: (ex. [http://www.ocf.berkeley.edu/~kelu/interviews/questions.html])
-
+    
 ## Group Division
 	* The algorithm video/discuss class
 	* The white board group practice (mini-groups are divided by specific language
@@ -21,7 +21,7 @@ This guide will help you to prepare and host an algorithm and interview prep mee
 
  + (*)This format is also very friendly to drop in attendees who are unable to join every week or to people who need to drop out from the group for a time due to other commitments but want to rejoin at any point in the future without feeling too left behind.
 
-## Online Invitation Sample:
+# Online Invitation Sample:
 
 This weekly meetup will cover whiteboarding, interview questions, pair programming, and the regularly scheduled algorithms study group will now be covering MACHINE LEARNING ALGORITHMS -- starting this week! 
 
