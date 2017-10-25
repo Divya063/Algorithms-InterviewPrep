@@ -1,5 +1,7 @@
 #Algorithms and Interview Prep Guide 
 
+[![Join the chat at https://gitter.im/WomenWhoCode/Open_Projects](https://badges.gitter.im/WomenWhoCode/Open_Projects.svg)](https://gitter.im/WomenWhoCode/Open_Projects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Getting Started
 
 This is the Github repo for the Women Who Code Algorithms and Interview Prep Study Group.
